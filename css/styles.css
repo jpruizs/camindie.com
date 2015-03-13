@@ -1,0 +1,30 @@
+/*
+* Styles V1
+* Copyright 2015, Camilo Ruiz
+* www.camindie.com
+* Free to use under the MIT license.
+* http://www.opensource.org/licenses/mit-license.php
+*/
+
+
+
+/* Responsive Video (iframe)
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+
+
+.video-container {
+  position: relative;
+  padding-bottom: 56.25%;
+  padding-top: 35px;
+  height: 0;
+  overflow: hidden;
+}
+
+
+.video-container iframe {
+  position: absolute;
+  top:0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}

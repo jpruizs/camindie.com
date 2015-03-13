@@ -1,13 +1,12 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" ng-app="videos">
 <head>
 
   <!-- Basic Page Needs
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
   <meta charset="utf-8">
-  <title>camindie.com  &#9825; &#9835; &#9654;</title>
-  <meta name="description" content="Camilo Ruiz, camindie, is an independent, alternative artist living in Melbourne, Australia. He specialises in video, music and photography. He doesn't draw a line between life and art. He shoots. He eats. He creates. He shares. He lives.">
-  <meta name="author" content="camindie@gmail.com">
+  <title>Mak TV Commercials</title>
+  <meta name="description" content="">
 
   <!-- Mobile Specific Metas
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
@@ -29,47 +28,42 @@
 
 </head>
 <body>
-  <!-- Google Plus verification code
-  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-  <a href="https://plus.google.com/101596877332405809730" rel="publisher"></a>
-
+  
   <!-- Primary Page Layout
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
   <div class="container">
    
     <div class="row">
       <div class="twelve columns" style="margin-top: 5%">
-        <h1>camindie</h1>
-        <div class="video-container">
-          <iframe width="1280" height="720" src="http://www.youtube.com/embed/wB3rqfrXj4A?&rel=0&theme=light&showinfo=0&disablekb=1&modestbranding=1&hd=1&autohide=1&playlist=KErtyn3d3O0,gBuJBWtVmpo,kUjdLkF2Wy8,UT9InBVamXI,2BnY1lU0-Pw,pHWL3ygbPmo,6jQy5pS04dQ" frameborder="0" allowfullscreen></iframe>
+        <h1>Mak Advertising TV Ads (API TEST)</h1>
+        
+        
+        <div   ng-controller="ChannelController as channel">
+
+          <youtube-video video-id="{{channel.currentVideo}}"></youtube-video>
+          
+          <div  ng-repeat="video in channel.videos.items">
+            <img src="{{video.snippet.thumbnails.medium.url}}" />
+            <h6>{{video.snippet.title}}</h6>
+          </div>
         </div>
+      
       </div> 
     </div>
     <div class="row"> 
       <div class="twelve columns" style="margin-top: 15%">
-        <p>
-          I am <i>camindie</i>. I am an independent artist living in Melbourne, Australia. I have been beside a camera or a musical instrument (or both!) for the last 10 years.<br><br>
-          <strong>videos. sounds. music. art. nature. food. love. life. now.</strong>
-        </p>
+        
       </div>
     </div>
   </div>
+  <script src="https://www.youtube.com/iframe_api"></script>
   <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular.min.js"></script>
+  <script src="js/angular-youtube-embed.min.js"></script>
   <script src="js/app.js"></script>
 
-  <!-- Google Analytics Code
-  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-  <script>
-    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
 
-    ga('create', 'UA-60583402-1', 'auto');
-    ga('send', 'pageview');
 
-  </script>
-
+ 
 <!-- End Document
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
 </body>
